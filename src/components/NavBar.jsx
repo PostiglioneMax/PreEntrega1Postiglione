@@ -1,30 +1,39 @@
 import React from "react";
 import CardWidget from "./CardWidget";
 import { Flex, Spacer, Box, Menu, MenuButton, MenuList, MenuItem, Button, Text } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 const NavBar = () => {
     return (
         <div>
             <Flex alignItems="center" bg="black">
                 <Box p="4">
-                    <Text color="white"> Streewear </Text>
+                    <Link to={"/"}>
+                        <Text color="white"> Streewear </Text>
+                    </Link>
                 </Box>
                 <Spacer />
                 <Button colorScheme="transparent" align="center" variant="ghost" color="white">
-                    Inicio
+                    New Collection
                 </Button>
                 <Spacer />
                 <Menu>
                     <MenuButton color="white">Categorias</MenuButton>
                     <MenuList bg="gray">
-                        <MenuItem bg="gray" color="white">
-                            Hoodie
-                        </MenuItem>
-                        <MenuItem bg="gray" color="white">
-                            Oversize Shirts
-                        </MenuItem>
-                        <MenuItem bg="gray" color="white">
-                            Shorts
-                        </MenuItem>
+                        <Link to={"/categoria/A"}>
+                            <MenuItem bg="gray" color="white">
+                                Categoria A
+                            </MenuItem>
+                        </Link>
+                        <Link to={"/categoria/B"}>
+                            <MenuItem bg="gray" color="white">
+                                Categoria B
+                            </MenuItem>
+                        </Link>
+                        <Link to={"/categoria/C"}>
+                            <MenuItem bg="gray" color="white">
+                                Categoria C
+                            </MenuItem>
+                        </Link>
                     </MenuList>
                 </Menu>{" "}
                 <Spacer />
