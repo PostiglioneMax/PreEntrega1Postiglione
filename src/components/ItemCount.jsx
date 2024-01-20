@@ -1,13 +1,12 @@
 import React from "react";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { CartContext } from "../context/ShoppingCartContext";
 import { Button } from "@chakra-ui/react";
+import Cart from "./Cart";
 
-const ItemCount = () => {
-    const [contador, setContador] = useState(0);
-
-    const mostrarMensaje = () => {
-        alert(` Agregado al carrito ${contador} unidades`);
-    };
+const ItemCount = ({ initial, product, onAdd }) => {
+    const { handleAddToCart } = useContext(CartContext);
+    const [contador, setContador] = useState(initial);
 
     const sumar = () => {
         if (contador < 10) {
@@ -21,12 +20,18 @@ const ItemCount = () => {
         }
     };
 
+    const handleAdd = () => {
+        const productToAdd = { ...product, quantity: contador };
+        handleAddToCart(productToAdd);
+        onAdd(true);
+    };
+
     return (
         <div>
             <Button colorScheme="teal" size="xs" onClick={sumar}>
                 +
             </Button>
-            <Button onClick={mostrarMensaje}>Agregar al carrito {contador}</Button>
+            <Button onClick={handleAdd}>Agregar al carrito {contador} </Button>
             <Button colorScheme="teal" size="xs" onClick={restar}>
                 -
             </Button>

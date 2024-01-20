@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
     const { id } = useParams();
-    console.log(id);
 
     const productos = [
         { id: 1, titulo: "Producto A", descripcion: "descripcion de producto A", precio: 1000, categoria: "A" },
@@ -38,11 +37,10 @@ const ItemDetailContainer = () => {
         });
 
     const productoFiltrado = productos.find((producto) => producto.id == id);
-    console.log(productoFiltrado);
 
     return (
         <div>
-            <ItemDetail producto={productoFiltrado} />
+            <ItemDetail producto={productoFiltrado} data={productos} />
         </div>
     );
 };
