@@ -21,15 +21,6 @@ export const ShoppingCartProvider = ({ children }) => {
         addProduct(productToAdd);
     };
 
-    // if (isInCart(item.id)) {
-    //     setCart(
-    //         cart.map((producto) => {
-    //             return producto.id === item.id ? { ...producto, quantity: producto.quantity + quantity } : producto;
-    //         })
-    //     );
-    // } else {
-    //     setCart([...cart, { ...item, quantity }]);
-    // }
     const clearCart = () => setCart([]);
 
     const isInCart = (id) => (cart.find((producto) => producto.id === id) ? true : false);

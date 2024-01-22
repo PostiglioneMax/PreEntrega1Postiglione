@@ -6,6 +6,7 @@ import ItemCount from "./ItemCount";
 import Item from "./Item";
 
 const ItemDetail = ({ producto, data }) => {
+    console.log(producto);
     const { productoId } = useParams();
     const [goToCart, setGoToCart] = useState(false);
     const { addProduct, cart } = useContext(CartContext);
