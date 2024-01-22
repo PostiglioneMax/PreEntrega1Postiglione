@@ -1,13 +1,22 @@
 import React from "react";
 import { useContext, useState } from "react";
 import { CartContext } from "../context/ShoppingCartContext";
+import { useParams } from "react-router-dom";
 
 const CartListItem = ({ product }) => {
-    const { addProduct } = useContext(CartContext);
+    const { addProduct, setCart, cart, removeProduct } = useContext(CartContext);
     const handleChange = (event) => {
         const quantity = event.target.value;
         addProduct({ ...product, quantity });
     };
+    //    const removeProduct = (id) => {
+    //        setCart(cart.filter((product) => product.id !== id));
+    //    };
+
+    const deleteProduct = () => {
+        removeProduct(product.id);
+    };
+
     return (
         <div>
             <h3>{product.titulo}</h3>
@@ -24,6 +33,7 @@ const CartListItem = ({ product }) => {
                 <option value={8}> 8 </option>
                 <option value={9}> 9 </option>
             </select>
+            <button onClick={deleteProduct}> Eliminar </button>
         </div>
     );
 };

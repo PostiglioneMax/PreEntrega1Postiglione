@@ -35,7 +35,7 @@ export const useGetProduct = (productId) => {
         getDoc(docRef).then((_doc) => {
             if (_doc.exists()) {
                 console.log("Document data:", _doc.data());
-                setProduct(_doc.data());
+                setProduct({ ..._doc.data(), id: productId });
             } else {
                 // docSnap.data() will be undefined in this case
                 console.log("No such document!");

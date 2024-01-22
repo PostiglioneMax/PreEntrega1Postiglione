@@ -4,8 +4,8 @@ export const CartContext = createContext(null);
 
 export const ShoppingCartProvider = ({ children }) => {
     const [cart, setCart] = useState([
-        { id: 1, titulo: "Producto A", descripcion: "descripcion de producto A", precio: 1000, categoria: "A", quantity: 5 },
-        { id: 2, titulo: "Producto B", descripcion: "descripcion de producto B", precio: 2000, categoria: "A", quantity: 2 },
+        //        { id: 1, titulo: "Producto A", descripcion: "descripcion de producto A", precio: 1000, categoria: "A", quantity: 5 },
+        //        { id: 2, titulo: "Producto B", descripcion: "descripcion de producto B", precio: 2000, categoria: "A", quantity: 2 },
     ]);
     const addProduct = (producto) => {
         console.log(producto);

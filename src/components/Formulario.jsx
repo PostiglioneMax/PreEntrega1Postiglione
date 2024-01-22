@@ -1,3 +1,4 @@
+import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { useState } from "react";
 
 const Formulario = () => {
@@ -21,8 +22,8 @@ const Formulario = () => {
     return (
         <div>
             <form action="" onSubmit={handleSubmit}>
-                <input type="text" placeholder="Nombre" onChange={(e) => setNombre((e.target.value = { nombre }))} />
-                <input type="text" placeholder="Mail" onChange={(e) => setEmail((e.target.value = { email }))} />
+                <input type="text" placeholder="Nombre" onChange={(e) => setNombre(e.target.value)} value={nombre} />
+                <input type="text" placeholder="Mail" onChange={(e) => setEmail(e.target.value)} value={email} />
                 <button type="submit">Enviar</button>
             </form>
             <p>{orderId}</p>

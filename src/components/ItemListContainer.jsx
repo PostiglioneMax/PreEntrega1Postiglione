@@ -6,10 +6,11 @@ import { useGetProducts } from "../hooks/useProduct";
 const ItemListContainer = ({}) => {
     const { categoriaId } = useParams();
     const { products } = useGetProducts({ categoriaId });
+    const sortedProducts = products.toSorted(({ categoriaId: categoriaA }, { categoriaId: categoriaB }) => categoriaA.localeCompare(categoriaB));
 
     const isEmpty = products.length === 0;
 
-    return <div>{isEmpty ? <h1>Quemaste todo</h1> : <ItemList productos={products} />}</div>;
+    return <div>{isEmpty ? <h1>Quemaste todo</h1> : <ItemList productos={sortedProducts} />}</div>;
 };
 
 export default ItemListContainer;
