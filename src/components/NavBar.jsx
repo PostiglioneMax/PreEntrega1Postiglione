@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
     return (
         <div>
-            <Flex alignItems="center" bg="black">
+            <Flex as="nav" alignItems="center" bg="gray.900">
                 <Box p="4">
                     <Link to={"/"}>
                         <Text color="white"> Streewear </Text>

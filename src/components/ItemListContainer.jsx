@@ -2,6 +2,7 @@ import React from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import { useGetProducts } from "../hooks/useProduct";
+import { Container, Grid, SimpleGrid } from "@chakra-ui/react";
 
 const ItemListContainer = ({}) => {
     const { categoriaId } = useParams();
@@ -10,7 +11,11 @@ const ItemListContainer = ({}) => {
 
     const isEmpty = products.length === 0;
 
-    return <div>{isEmpty ? <h1>Quemaste todo</h1> : <ItemList productos={sortedProducts} />}</div>;
+    return (
+        <Container maxW="100vh" maxH="100vh">
+            {isEmpty ? <h1>Quemaste todo</h1> : <ItemList productos={sortedProducts} />}
+        </Container>
+    );
 };
 
 export default ItemListContainer;
