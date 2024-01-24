@@ -4,11 +4,11 @@ import { Grid, SimpleGrid } from "@chakra-ui/react";
 
 const ItemList = ({ productos }) => {
     return (
-        <Grid maxW="100vh" templateRows="repeat(2, 1fr)" bg="orange" gridGap="20px">
+        <SimpleGrid margin="30px" columns={4} spacing={10} minChildWidth="300px" bg="gray.900">
             {productos.map((p) => {
                 return <Item key={p.id} titulo={p.titulo} descripcion={p.descripcion} precio={p.precio} id={p.id} imagensita={p.imagensita} />;
             })}
-        </Grid>
+        </SimpleGrid>
     );
 };
 

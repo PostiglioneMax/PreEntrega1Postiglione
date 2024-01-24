@@ -1,11 +1,11 @@
 import React from "react";
-import { Spinner } from "@chakra-ui/react";
+import { Container, Spinner } from "@chakra-ui/react";
 
 const Loader = () => {
     return (
-        <div>
-            <Spinner thickness="4px" speed="0.65s" emptyColor="gray.200" color="blue.500" size="xl" />
-        </div>
+        <Container maxW="2xl" centerContent marginTop="400px">
+            <Spinner thickness="4px" speed="0.65s" emptyColor="black" color="gray.300" size="xl" />
+        </Container>
     );
 };
 

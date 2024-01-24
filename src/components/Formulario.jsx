@@ -1,7 +1,7 @@
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { useState } from "react";
 
-const Formulario = () => {
+const Formulario = (products) => {
     const [nombre, setNombre] = useState("");
     const [email, setEmail] = useState("");
     const [orderId, setOrderId] = useState("");
@@ -15,7 +15,7 @@ const Formulario = () => {
 
     const order = {
         cliente: { nombre, email },
-        //items: {cart} CON CONTEXT
+        items: { orderId, products },
     };
     const ordersCollection = collection(db, "orden");
 
@@ -26,7 +26,6 @@ const Formulario = () => {
                 <input type="text" placeholder="Mail" onChange={(e) => setEmail(e.target.value)} value={email} />
                 <button type="submit">Enviar</button>
             </form>
-            <p>{orderId}</p>
         </div>
     );
 };

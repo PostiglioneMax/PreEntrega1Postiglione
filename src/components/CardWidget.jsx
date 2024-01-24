@@ -13,9 +13,9 @@ const CardWidget = () => {
     }, 0);
     return (
         <div>
-            <Text color="white">
+            <Text color="black">
                 <Link to={"/cart"}>
-                    <FontAwesomeIcon icon={faCartShopping} color="white" /> {totalProducts}
+                    <FontAwesomeIcon icon={faCartShopping} color="black" /> {totalProducts}
                 </Link>
             </Text>
         </div>

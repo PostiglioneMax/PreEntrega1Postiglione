@@ -42,7 +42,7 @@ export const useGetProduct = (productId) => {
             }
         });
     }, [productId]);
-    //console.log("useGetProducts", products);
+
     return {
         product,
     };
