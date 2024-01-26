@@ -1,5 +1,7 @@
 # Oversize E-commerce Project
 
+https://github.com/PostiglioneMax/PreEntrega1Postiglione/assets/140523383/8325127a-cba2-4bb1-b639-29254537af13
+
 ![Project Logo](path/to/logo.png) <!-- Replace with the path to your project logo -->
 
 ## Table of Contents
