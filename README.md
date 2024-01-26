@@ -1,6 +1,6 @@
 # Oversize E-commerce Project
 
-![Project Logo](path/to/logo.png) <!-- Replace with the path to your project logo -->
+![Project Logo](https://firebasestorage.googleapis.com/v0/b/testing2-ddfc5.appspot.com/o/cringeEdit.jpeg?alt=media&token=6c0a00d0-879f-4d62-a540-5f08f0c106b1) <!-- Replace with the path to your project logo -->
 
 ## Table of Contents
 
