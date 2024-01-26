@@ -30,12 +30,9 @@ Welcome to the Oversize E-commerce Project, a React JS application developed as 
 
 1. Clone the repository:
 
-    ```bash git clone https://github.com/PostiglioneMax/PreEntrega1Postiglione.git
-
-    ```
-
 ```
-
+    bash git clone https://github.com/PostiglioneMax/PreEntrega1Postiglione.git
+```
 
 2. Navigate to the project directory:
    `cd PreEntrega1Postiglione`
@@ -57,7 +54,6 @@ Welcome to the Oversize E-commerce Project, a React JS application developed as 
 ## Project Structure
 
 ```
-
 |-- public/
 |-- src/
 | |-- components/
@@ -74,7 +70,8 @@ Welcome to the Oversize E-commerce Project, a React JS application developed as 
 | |-- index.js
 |-- .gitignore
 |-- package.json
-|-- README.md```
+|-- README.md
+```
 
 ## Contributing
 
