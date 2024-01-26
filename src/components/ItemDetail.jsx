@@ -11,13 +11,6 @@ const ItemDetail = ({ producto, data }) => {
     const [goToCart, setGoToCart] = useState(false);
     const { addProduct, cart } = useContext(CartContext);
 
-    //    const handleAddToCart = (quantity) => {
-    //        const productQuantity = { ...producto, quantity: quantity };
-    //        addProduct(productQuantity);
-    //        setGoToCart(true);
-    //        console.log(productQuantity);
-    //    };
-
     return (
         <div>
             <Card

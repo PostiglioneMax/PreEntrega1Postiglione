@@ -44,30 +44,3 @@ const ItemListContainer = ({}) => {
 };
 
 export default ItemListContainer;
-
-//    const [productos, setProductos] = useState([]);
-//    useEffect(() => {
-//        const db = getFirestore();
-//
-//        const itemsCollection = collection(db, "store");
-//
-//        getDocs(itemsCollection).then((snapshot) => {
-//            const docs = snapshot.docs.map((doc) => doc.data());
-//            setProductos(docs);
-//        });
-//    },);
-//
-//    const mostrarProductos = new Promise((resolve, reject) => {
-//        if (productos.length >= 0) {
-//            resolve(productos);
-//        } else {
-//            reject("No se obtuvieron productos");
-//        }
-//    });
-//    mostrarProductos
-//        .then((resultado) => {})
-//        .catch((error) => {
-//            console.log(error);
-//        });
-//
-//    const productosFiltrados = productos.filter((producto) => producto.categoria == categoriaId);
