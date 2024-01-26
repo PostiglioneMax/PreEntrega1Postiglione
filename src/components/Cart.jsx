@@ -19,7 +19,7 @@ const Cart = () => {
                     footer: '<a href="/">¿Que estas esperando? Añadelos</a>',
                 })
             ) : (
-                <Flex>
+                <Flex justifyContent="center" padding="0px" m="20px">
                     <CartList products={cart} resetCart={clearCart}></CartList>
                 </Flex>
             )}

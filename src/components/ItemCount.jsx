@@ -28,11 +28,67 @@ const ItemCount = ({ initial, product, onAdd }) => {
 
     return (
         <div>
-            <Button colorScheme="teal" size="xs" onClick={sumar}>
+            <Button
+                margin="10px"
+                borderRadius="2rem"
+                bgColor="red.600"
+                color="white"
+                _hover={{
+                    bg: "white",
+                    color: "red",
+                    border: "1px solid red",
+                    transform: "scale(1.2)",
+                }}
+                _active={{
+                    bg: "white",
+                    color: "red",
+                    transform: "scale(1.5)",
+                    borderColor: "red",
+                }}
+                onClick={sumar}
+            >
                 +
             </Button>
-            <Button onClick={handleAdd}>Agregar al carrito {contador} </Button>
-            <Button colorScheme="teal" size="xs" onClick={restar}>
+            <Button
+                bgColor="white"
+                color="red.600"
+                border="1px solid red"
+                borderRadius="2rem"
+                _hover={{
+                    bg: "white",
+                    color: "red",
+                    border: "1px solid red",
+                    transform: "scale(1.1)",
+                }}
+                _active={{
+                    bg: "white",
+                    color: "red",
+                    transform: "scale(1.5)",
+                    borderColor: "red",
+                }}
+                onClick={handleAdd}
+            >
+                Agregar al carrito {contador}{" "}
+            </Button>
+            <Button
+                margin="10px"
+                borderRadius="2rem"
+                bgColor="red.600"
+                color="white"
+                _hover={{
+                    bg: "white",
+                    color: "red",
+                    border: "1px solid red",
+                    transform: "scale(1.2)",
+                }}
+                _active={{
+                    bg: "white",
+                    color: "red",
+                    transform: "scale(1.2)",
+                    borderColor: "red",
+                }}
+                onClick={restar}
+            >
                 -
             </Button>
         </div>

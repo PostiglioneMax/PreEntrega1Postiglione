@@ -3,7 +3,8 @@ import CartListItem from "./CartListItem";
 import { useState, useEffect } from "react";
 import Formulario from "./Formulario";
 import Cart from "./Cart";
-import { Box, Flex, Spacer } from "@chakra-ui/react";
+import { Box, Button, Flex, Spacer } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const CartList = ({ products, resetCart }) => {
     const [goToForm, setGoToForm] = useState(false);
@@ -14,24 +15,35 @@ const CartList = ({ products, resetCart }) => {
 
     return (
         <div>
-            {!goToForm && products.map((product) => <CartListItem key={product.id} product={product} />)}
+            {!goToForm &&
+                products.map((product) => (
+                    <Flex background="gray.300" justifyContent="center" alignItems="center" margin="0px" p="0px" border="1px solid black" borderRadius="2rem">
+                        <CartListItem key={product.id} product={product} />
+                    </Flex>
+                ))}
 
             <Flex>
-                <Box p="4" bg="red.400">
-                    Box 1
+                <Box p="4">
+                    <Link to={"/"}>
+                        <Button> Seguir comprando </Button>
+                    </Link>
                 </Box>
                 <Spacer />
-                <Box p="4" bg="red.400">
-                    <button onClick={resetCart}> Clear </button>
+                <Box p="4">
+                    <Button onClick={resetCart}> Clear </Button>
                 </Box>
-                <Box p="4" bg="red.400">
+                <Box p="4" display="flex" alignItems="center" justifyContent="center">
                     Precio total: {newTotalPrice}
                 </Box>
-                <Box p="4" bg="green.400">
-                    <button onClick={handlePayout}> Payout </button>
+                <Box p="4">
+                    <Button onClick={handlePayout}> Payout </Button>
                 </Box>
             </Flex>
-            {goToForm && <Formulario products={products} />}
+            {goToForm && (
+                <Flex justifyContent="center">
+                    <Formulario products={products} />
+                </Flex>
+            )}
         </div>
     );
 };

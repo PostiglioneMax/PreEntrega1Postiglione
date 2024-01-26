@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import { useGetProducts } from "../hooks/useProduct";
 import { Center, Container, Grid, Heading, Image, SimpleGrid, VStack, grid } from "@chakra-ui/react";
 import Loader from "./Loader";
-import { Columns } from "lucide-react";
 
 const ItemListContainer = ({}) => {
     const { categoriaId } = useParams();
