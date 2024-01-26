@@ -1,6 +1,8 @@
 # Oversize E-commerce Project
 
-![Project Logo](https://firebasestorage.googleapis.com/v0/b/testing2-ddfc5.appspot.com/o/cringeEdit.jpeg?alt=media&token=6c0a00d0-879f-4d62-a540-5f08f0c106b1) <!-- Replace with the path to your project logo -->
+# ![Project Logo](https://firebasestorage.googleapis.com/v0/b/testing2-ddfc5.appspot.com/o/cringeEdit.jpeg?alt=media&token=6c0a00d0-879f-4d62-a540-5f08f0c106b1)
+
+https://github.com/PostiglioneMax/PreEntrega1Postiglione/assets/140523383/8325127a-cba2-4bb1-b639-29254537af13
 
 ## Table of Contents
 
